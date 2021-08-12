@@ -1,0 +1,11 @@
+<a href="{% url 'home' %}">Home</a>
+<br /><br />
+
+{%for form in car_forms %}
+    {% if forloop.last %}
+        Brand: {{form.brand}}<br />
+        Model: {{form.car_model}}<br />
+        Manufacturing date: {{form.manufacturing_date}}<br />
+        Power output (HP): {{form.power_output}} <br />
+    {% endif %}
+{% endfor %}

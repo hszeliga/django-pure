@@ -1,0 +1,9 @@
+{%for form in forms %}
+    {% if forloop.last %}
+        Login: {{form.login}}<br />
+        Password: {{form.password}}
+    {% endif %}
+{% endfor %}
+
+<br /><br />
+<a href="{% url 'home' %}">Home</a>

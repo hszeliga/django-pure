@@ -1,0 +1,13 @@
+<a href="{% url 'home' %}">Home</a>
+<br /><br />
+
+<form method = "POST" action = "">
+    {% csrf_token %}
+    <fieldset>
+        {{form}}
+    </fieldset>
+    <br />
+    <input type="submit" value="Login">
+    <br />
+    <p>Do not have an account? <a href="{% url 'register' %}">Register</a></p>
+</form>
